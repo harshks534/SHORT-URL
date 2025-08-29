@@ -16,7 +16,7 @@ const PORT =process.env.PORT || 8001;
 
 const MONGO_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/short-url";
 
-connectToMongoDB(MONGO_URI).then(() => {
+connectToMongoDB(MONGODB_URL).then(() => {
     console.log("MongoDB Connected for SHORT-URL");
 }).catch(err => {
     console.error("MongoDB connection error:", err);
