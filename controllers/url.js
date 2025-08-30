@@ -15,13 +15,15 @@ async function handleGenerateNewShortURL(req, res){
         shortId: shortID,
         redirectURL: body.url,
         visitHistory:[],
-        createdBy: req.user._id,
+        createdBy: req.user ? req.user._id:null,
     })
     // return res.json({id: shortID})
     //during input in postman we are giving "url" : "https://youtube.com", here key is given as "url" because above we mentioned (body.url) to acess it...
 
     return res.render("home",{
         id: shortID,
+        host: req.get("host"),
+        protocol: req.protocol,
     })
 
 }
