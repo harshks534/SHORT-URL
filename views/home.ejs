@@ -23,10 +23,10 @@
 
     <% } %>
    
-    
-     <a href="/home" style="display:inline-block; padding:8px 15px; background:blue; color:white; text-decoration:none; border-radius:5px;">
+<a href="/url" style="display:inline-block; padding:8px 15px; background:blue; color:white; text-decoration:none; border-radius:5px;"></a>
   Home
-</a>
+</a>  
+
 <!-- -------------------------------- -->
 
    <!-- urls.forEach(url => { 
@@ -35,11 +35,18 @@
 <!-- ----------------------------------------- -->
 
 <div>
+
+    <p>To Visit your Short-url, type this in url bar :-> 
+        1. https://short-url-n7ra.onrender.com/url/shortID
+        2. Go back to home and refresh the page, to see the updated number of clicks
+
+    </p>
     <form method="POST" action="/url">
         <label for="">Enter your Original Url</label>
         <input type="text" name="url" placeholder="https://example.com">
         <button type="submit">Generate</button>
     </form>
+
 </div>
 <div>
     <% if (locals.urls) { %>
