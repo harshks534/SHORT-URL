@@ -14,7 +14,7 @@ const app = express();
 require("dotenv").config();
 const PORT =process.env.PORT || 8001;
 
-const MONGO_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/short-url";
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/short-url";
 
 connectToMongoDB(MONGODB_URL).then(() => {
     console.log("MongoDB Connected for SHORT-URL");
